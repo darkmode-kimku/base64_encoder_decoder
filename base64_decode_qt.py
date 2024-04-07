@@ -104,11 +104,11 @@ class MyWindow(QWidget):
         QApplication.clipboard().setText(self.WidgetResult.textEdit.toPlainText())
 
     def timeout(self):
-        if self.checkBoxGroup.checkBoxs[0].isChecked():
+        if self.checkBoxGroup.checkBoxs[1].isChecked():
             self.EncodeB64()
-        elif self.checkBoxGroup.checkBoxs[1].isChecked():
-            self.DecodeB64()
         elif self.checkBoxGroup.checkBoxs[2].isChecked():
+            self.DecodeB64()
+        elif self.checkBoxGroup.checkBoxs[3].isChecked():
             self.ResultCopy()
     
     def WebOpen(self):
